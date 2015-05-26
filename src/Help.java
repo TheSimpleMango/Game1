@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -50,8 +49,8 @@ public class Help extends JPanel implements MouseListener, ActionListener {
 		
 		g.setColor(Color.black);
 		g.setFont(font);
-		g.drawString("use WASD to move the cloud", 165, 200);
-		g.drawString("use the arrow keys to move the trampoline", 110, 225);
+		g.drawString("use WASD to move the cloud and right person", 165, 200);
+		g.drawString("use the arrow keys to move the trampoline and left person", 110, 225);
 		g.drawString("don't let the ball go out of the screen", 140, 250);
 	}
 

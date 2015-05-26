@@ -16,13 +16,24 @@ import javax.swing.JPanel;
 public class Game extends JPanel implements MouseListener, ActionListener {
 	JFrame menuFrame = new JFrame("HERO?");
 	BufferedImage gameImage;
+	Ball ball;
+	Paddle trampoline;
+	Paddle cloud;
+	Paddle turtle;
+	Paddle hedgehog;
 
 	public void start() {
 		try {
-			gameImage = ImageIO.read(Game.class.getResourceAsStream("menuArt.png"));
+			gameImage = ImageIO.read(Game.class.getResourceAsStream("image.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		ball = new Ball(0,0,10,10,5);
+		trampoline = new Paddle(0,0,100,50,"trampoline.png");
+		cloud = new Paddle(0,0,100,50,"cloud.png");
+		turtle = new Paddle(0,0,50,50,"turtle.png");
+		hedgehog = new Paddle(0,0,50,50,"umturtle.png");
 		
 		menuFrame.setSize(601, 601);
 		menuFrame.setVisible(true);
