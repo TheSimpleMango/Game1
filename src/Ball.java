@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 public class Ball {
 	int ballX;
 	int ballY;
@@ -15,7 +17,7 @@ public class Ball {
 	public void update(){
 		
 	}
-	public void draw(){
-		
+	public void draw(Graphics g){
+		g.fillOval(ballX, ballY, ballWidth, ballHeight);
 	}
 }
